@@ -89,5 +89,12 @@ void fillDefault(LinearQueue<T>& q, int n) {
         q.add(T());
     }
 }
-
+// ===== Specializacija fillDefault za int =====
+template<>
+void fillDefault<int>(LinearQueue<int>& q, int n) {
+    std::srand(static_cast<unsigned>(std::time(nullptr)));
+    for (int i = 0; i < n; ++i) {
+        q.add(std::rand() % 100); // nakljuène vrednosti od 0 do 99
+    }
+}
 #endif // LINEARQUEUE_H
