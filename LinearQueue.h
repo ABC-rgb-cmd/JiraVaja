@@ -82,4 +82,12 @@ Point LinearQueue<Point>::getMax() const {
     return maxPoint;
 }
 
+// ===== Šablona funkcije fillDefault =====
+template<typename T>
+void fillDefault(LinearQueue<T>& q, int n) {
+    for (int i = 0; i < n; ++i) {
+        q.add(T());
+    }
+}
+
 #endif // LINEARQUEUE_H
